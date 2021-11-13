@@ -106,5 +106,5 @@ while iter < 4000 :
     item += 1
     iter += 1    
 
-print(sort)
+print("\n\n",sort)
 infile.close
