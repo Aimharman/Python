@@ -16,6 +16,8 @@ print("Number of rows in Data Frame: ",rows)
 
 # Metod to extract date-time format data stored in str format when imported into list from CSV
 
+#def ord_date_time(tripcomp)
+
 from datetime import datetime
 ordlist = []
 rows = 0
@@ -33,7 +35,94 @@ for row in tripcomplete:
         #print(var)
         cnt += 1
     rows += 1
-print (ordlist)
+#print (ordlist)
 
+# Preparing single dimension list of each date-time attribute for sorting & plotting
+
+Ylist = []
+rows = 0
+for row in ordlist:
+    tempest = [0]
+    Ylist.append(tempest)
+    Ylist[rows][0] = ordlist[rows][0] 
+    rows += 1
+#print (Ylist)
+
+Mlist = []
+rows = 0
+for row in ordlist:
+    tempest = [0]
+    Mlist.append(tempest)
+    Mlist[rows][0] = ordlist[rows][1] 
+    rows += 1
+#print (Mlist)
+
+Dlist = []
+rows = 0
+for row in ordlist:
+    tempest = [0]
+    Dlist.append(tempest)
+    Dlist[rows][0] = ordlist[rows][2] 
+    rows += 1
+#print (Dlist)
+
+Hlist = []
+rows = 0
+for row in ordlist:
+    tempest = [0]
+    Hlist.append(tempest)
+    Hlist[rows][0] = ordlist[rows][3] 
+    rows += 1
+#print (Hlist)
+
+mlist = []
+rows = 0
+for row in ordlist:
+    tempest = [0]
+    mlist.append(tempest)
+    mlist[rows][0] = ordlist[rows][4] 
+    rows += 1
+#print (mlist)
+
+
+sort = mlist
+# Optimized bubble sort algorithm for implementation
+
+item = 1
+for i in sort:
+    try:
+        temp = sort[item]
+    except IndexError as error:
+        print ("Length of List: ", item)
+    item += 1
+lenoflist = item - 2
+
+item = 0
+ite = 0
+iterate = 0
+incount = 1
+count = 0
+while incount > 0:
+    count += 1
+    ite = 0
+    incount = 0
+    if iterate > 0:
+        try:
+            temp = sort[item+1]
+        except IndexError as error:
+            item = 0 
+            print("Error")
+    while ite < lenoflist:
+        if sort[ite] < sort[ite+1]:
+            incount = 1
+            temp = sort[ite]
+            sort[ite] = sort[ite+1]
+            sort[ite+1] = temp
+        ite += 1
+    item = 0
+    iterate = 1
+
+#print ("Sorted List: ",sort)
+print ("Iterator run: ",count, "times")
 
 infile.close
