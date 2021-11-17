@@ -321,9 +321,9 @@ if foh == 0:
                         print("rown:", rown, "rows:", rows)
                         #print(dribblelist)
                         iterstop = 2
-                        range = rows - countiter - 1
+                        range = rows
                         while j<range:
-                            print("j: ", j)
+                            #print("j: ", j)
                             comp = dribblelist[rown][3]
                             comp1 = dribblelist[rown1][3]
                             
