@@ -300,13 +300,14 @@ if foh == 0:
                     #countiter += 1
                     #print("rows: ", rows)
                 else:
+                    dribblelist.append(row)
                     i = 1
                     temp = []
                     if countiter < 1:
                         rowcntrec = 0
                         rowcntrec1 = 1
                     elif countiter > 0:
-                        rowcntrec = rows - delta
+                        rowcntrec = rows - delta - countiter
                         rowcntrec1 = rowcntrec + 1
                     delta = 0
                     iterstop = 3
@@ -322,7 +323,7 @@ if foh == 0:
                         iterstop = 2
                         range = rows - countiter - 1
                         while j<range:
-                            #print("j: ", j)
+                            print("j: ", j)
                             comp = dribblelist[rown][3]
                             comp1 = dribblelist[rown1][3]
                             
