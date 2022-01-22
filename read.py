@@ -1,4 +1,4 @@
-# Some data manipulation techniques without numpy and pandas!! ---> Important.
+# Some data manipulation techniques without numpy and pandas!! ---> Important concepts.
 
 import sys
 
